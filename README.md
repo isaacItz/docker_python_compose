@@ -27,4 +27,18 @@ services:
             - "./data:/data"
         command: redis-server --appendonly yes
 ```
-5) 
+5) Primero instalamos `docker-compose` si no estuviese instalado, lo que podemos asegurar con el comando `docker-compose --version`:
+> docker-compose --version
+
+6) Vamos a probar a crear la apliación en 2 contenedores con el comando `docker-compose up` y ver qué pasa:
+> docker-compose up -d --scale web=2
+* Es normal que aparezca un error porque no tenemos recursos para ejecutar más de un servicio web en GitPod
+* Dado el error, es lo mismo ejecutar simplemente `docker-compose up -d`
+* El contador que se almacena en Redis ya funciona
+
+
+## Parada del contenedor Docker Compose de Python/Flask
+Para parar un contenedor en ejecución, primero hemos de saber el ID de dicho contenedor con el comando `docker ps`. Una vez averiguado, podemos pararlo con `docker stop`:
+> docker ps
+
+> docker stop XXXXXXXXXXXX
