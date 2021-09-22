@@ -3,7 +3,7 @@ services:
     web:
         build: .
         ports:
-            - "4000:80"
+            - "22222:80"
     redis:
         image: redis
         ports:
