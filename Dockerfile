@@ -1,5 +1,6 @@
 # Partimos de una base oficial de python
 FROM python:3.8-slim-buster
+LABEL maintainer="JuliBCN <julibcn@gmail.com>"
 
 # El directorio de trabajo es desde donde se ejecuta el contenedor al iniciarse
 WORKDIR /app
